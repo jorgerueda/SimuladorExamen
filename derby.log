@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Feb 20 16:13:21 CET 2017:
+ Iniciando instancia a816c00e-015a-5c15-9064-000004aa3ba8 de Derby, versión The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): 
+en el directorio de base de datos /Users/jorgerueda/NetBeansProjects/ProyectoDavid/baseDatos con el cargador de clases sun.misc.Launcher$AppClassLoader@20e90906
+Cargado desde file:/Applications/NetBeans/glassfish-4.1.1/javadb/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_79-b15
+user.dir=/Users/jorgerueda/NetBeansProjects/ProyectoDavid
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.12.3
+derby.system.home=null
+Cargador de clases de base de datos iniciado - derby.database.classpath=''
