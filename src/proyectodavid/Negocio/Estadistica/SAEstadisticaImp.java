@@ -83,7 +83,21 @@ public class SAEstadisticaImp implements SAEstadistica{
 
     @Override
     public int bajaEstadistica(Estadistica estadistica) {
-      return 0;
+      int exit=1;
+        try{
+            
+       entityManager.getTransaction().begin();     
+       Estadistica est = entityManager.find(Estadistica.class,estadistica.getId());
+       entityManager.remove(est);
+       entityManager.getTransaction().commit();
+       }catch(Exception e){
+            
+        exit= 0;
+        
+        }finally{
+        entityManager.close();
+        return exit;
+       }
     }
 
     @Override

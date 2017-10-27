@@ -1342,6 +1342,7 @@ public class Test extends javax.swing.JFrame implements Vista, Observer {
              listaOrdenPreguntas.get(indexPregunta).setSelected("D");
             return listaOrdenPreguntas.get(indexPregunta).getD();
          }else{
+             listaOrdenPreguntas.get(indexPregunta).setSelected(null);
              return null;
          }
         
@@ -1374,10 +1375,12 @@ public class Test extends javax.swing.JFrame implements Vista, Observer {
             listaContestadas.set(indexPregunta,false);
              
             this.preguntasContestadas--;
+            if (this.preguntasContestadas<0){
+                this.preguntasContestadas=0;
+            }
             this.jTextFieldContestadads.setText(String.valueOf(this.preguntasContestadas));
         }
 
-        System.out.print(sol);
         
     }
     

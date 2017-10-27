@@ -7,7 +7,7 @@ import proyectodavid.Negocio.Pregunta.Pregunta;
 import proyectodavid.Negocio.Usuario.ClavesUsuarioPregunta;
 import proyectodavid.Negocio.Usuario.Usuario;
 
-@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2017-02-21T22:41:30")
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2017-03-22T00:25:03")
 @StaticMetamodel(UsuarioPregunta.class)
 public class UsuarioPregunta_ { 
 

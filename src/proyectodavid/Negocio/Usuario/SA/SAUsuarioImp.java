@@ -13,6 +13,9 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import javax.persistence.RollbackException;
 import proyectodavid.IniciarBd;
+import proyectodavid.Negocio.Estadistica.Estadistica;
+import proyectodavid.Negocio.Estadistica.SAEstadistica;
+import proyectodavid.Negocio.FactoriaSA.FactoriaSA;
 import proyectodavid.Negocio.Pregunta.Pregunta;
 import proyectodavid.Negocio.Usuario.Usuario;
 
@@ -57,6 +60,15 @@ public class SAUsuarioImp implements SAUsuario{
         int exit=1;
         try{
        Usuario usr = entityManager.find(Usuario.class,usuario.getId());
+       
+       SAEstadistica servicioEstadistica = FactoriaSA.getInstancia().generaSAEstadistica();
+       Collection <Estadistica> listC=servicioEstadistica.mostrarEstadisticas(usr.getId());
+       
+       for( Estadistica es : listC){
+          servicioEstadistica = FactoriaSA.getInstancia().generaSAEstadistica();  
+             servicioEstadistica.bajaEstadistica(es);
+         }       
+
        entityManager.getTransaction().begin();
        entityManager.remove(usr);
        entityManager.getTransaction().commit();

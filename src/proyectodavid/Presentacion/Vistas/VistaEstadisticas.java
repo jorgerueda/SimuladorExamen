@@ -235,12 +235,10 @@ public class VistaEstadisticas extends javax.swing.JFrame implements Vista{
         
         for(Estadistica e : listC){
          contestadasNew=e.getContestadasNew();
-         System.out.println("contestadas"+contestadasNew);
          contestadasOld=e.getContestadasOld();
-         System.out.println("contestadas"+contestadasOld);
 
          modelo2.addRow(new Object[]{e.getCategoria().getNombre(),e.getCategoria().getNumeroPreguntas(),contestadasNew,e.getActual(),contestadasNew-e.getActual()});            
-         modelo1.addRow(new Object[]{e.getCategoria().getNombre(),e.getCategoria().getNumeroPreguntas(),contestadasOld,e.getActual(),contestadasOld-e.getOld()});   
+         modelo1.addRow(new Object[]{e.getCategoria().getNombre(),e.getCategoria().getNumeroPreguntas(),contestadasOld,e.getOld(),contestadasOld-e.getOld()});   
             
         }
         
